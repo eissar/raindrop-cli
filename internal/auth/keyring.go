@@ -87,6 +87,7 @@ func openKeyring() (keyring.Keyring, error) {
 
 	cfg := keyring.Config{
 		ServiceName:              config.AppName,
+		LibSecretCollectionName:  "login",
 		KeychainTrustApplication: false,
 		AllowedBackends:          backends,
 		FileDir:                  keyringDir,
